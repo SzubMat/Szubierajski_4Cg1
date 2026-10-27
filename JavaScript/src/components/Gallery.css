@@ -1,0 +1,50 @@
+select {
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 1;
+    cursor: pointer;
+}
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.lightbox-buttons {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+.lightbox-buttons button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
